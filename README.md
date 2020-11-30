@@ -17,5 +17,5 @@ In the project directory run:
 ### `bundle install && rails db:migrate && rails db:seed`
 
 Runs the app in the development mode.
-### rails s
+### `rails s`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
