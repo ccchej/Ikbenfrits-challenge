@@ -1,12 +1,15 @@
-## Install ruby 2.7.1
-## Install rails 6.0.3.4
-## Install Sqlite3
-## Clone this repo
+* Install Ruby version 2.7.1
 
-In the project directory run:
+* Install Rails version 6.0.3.4
 
-### `bundle install && rails db:migrate && rails db:seed`
+* Install Sqlite3
 
-Runs the app in the development mode.
-### `rails s`
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Clone this repo
+
+* In the project directory run:
+## bundle install && rails db:migrate && rails db:seed
+
+* Runs the app in the development mode.
+## rails s
+
+* Open http://localhost:3000 to view it in the browser.
