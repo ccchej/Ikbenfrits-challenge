@@ -1,0 +1,56 @@
+<h1>Pastries</h1>
+<table class="">
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Packs</th>
+    </tr>
+    <% @pastries.each do |pastry| %>
+        <tr>
+            <td width="50%"><%= pastry.name %></td>
+            <td width="30%">
+                <%= pastry.packs.first.code %>
+            </td>
+            <td align="right">
+                <% pastry.packs.each do |pack| %>
+                <p><%= pack.qty %> pcs. @ €<%= pack.price.to_s %></p>
+                <% end %>
+            </td>
+        </tr>
+    <% end %>
+</table>
+<h2>My Order</h2>
+
+<form method="post" action="pastries/order">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="code" placeholder="Code">
+            </td>
+            <td>
+                <input type="number" name="order" placeholder="Order">
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary">Place order</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div class="order" id="myOrder">
+
+</div>
+<% content_for :jsbody do %>
+  <script>
+    $(document).ready(function() {
+        $('form').submit(function(e){
+            e.preventDefault();
+            $.post($(this).prop('action'), $(this).serialize(), function(res) {
+                console.log(res)
+                $('#myOrder').html(res);
+            });
+        });
+    });
+  </script>
+<% end %>
