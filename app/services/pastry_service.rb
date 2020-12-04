@@ -110,24 +110,24 @@ class PastryService
           if keys[0].to_i.equal?(pack.qty)
             qty = values[0]
             unit_price = (qty.to_f*pack.price.to_f).round(2)
-            order[:packs].push({
+            order[:packs] << {
               pcs: keys[0],
               qty: qty,
               price: pack.price,
               unit_price: unit_price
-            })
+            }
             order[:total] += unit_price
           end
           
           if keys[1].to_i.equal?(pack.qty)
             qty = values[1]
             unit_price = (qty.to_f*pack.price.to_f).round(2)
-            order[:packs].push({
+            order[:packs] << {
               pcs: keys[1],
               qty: qty,
               price: pack.price,
               unit_price: unit_price
-            })
+            }
             order[:total] += unit_price
           end
         end
