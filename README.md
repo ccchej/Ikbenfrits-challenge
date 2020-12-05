@@ -17,6 +17,11 @@
 
 ## Using docker
 * Install docker
+
 ## build docker
 * docker build -t ikbenfrits-challenge .
+
+## run the app
+* docker run -p 3000:3000 ikbenfrits-challenge
+
 ## Open http://localhost:3000 to view it in the browser.
