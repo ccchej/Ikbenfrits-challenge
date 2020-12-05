@@ -14,3 +14,8 @@
 * rails s
 
 ## Open http://localhost:3000 to view it in the browser.
+
+## Using docker
+* Install docker
+## build docker
+* docker build .
