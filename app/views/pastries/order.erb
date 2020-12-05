@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Packs</th>
+        <th>Qty</th>
+        <th>Total price</th>
+    </tr>
+    <tr>
+        <td width="30%"><%= @my_order[:name] %></td>
+        <td width="30%">
+            <%= @my_order[:code] %>
+        </td>
+        <td >
+            <% @my_order[:packs].each do |pack| %>
+            <p><%= pack[:pcs] %> pcs. @ €<%= pack[:price].to_s %></p>
+            <% end %>
+        </td>
+        <td >
+            <% @my_order[:packs].each do |pack| %>
+            <p><%= pack[:qty] %></p>
+            <% end %>
+        </td>
+        <td width="20%">
+            €<%= @my_order[:total] %>
+        </td>
+    </tr>
+</table>
