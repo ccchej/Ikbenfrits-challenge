@@ -1,3 +1,15 @@
+## Run app using docker
+* Install docker
+
+## build docker
+* docker build -t ikbenfrits-challenge .
+
+## run the app
+* docker run -p 3000:3000 ikbenfrits-challenge
+
+## Open http://localhost:3000 to view it in the browser.
+
+## Or 
 ## Requirement
 * Install Ruby version 2.7.1
 
@@ -12,16 +24,5 @@
 
 ## Runs the app in the development mode.
 * rails s
-
-## Open http://localhost:3000 to view it in the browser.
-
-## Using docker
-* Install docker
-
-## build docker
-* docker build -t ikbenfrits-challenge .
-
-## run the app
-* docker run -p 3000:3000 ikbenfrits-challenge
 
 ## Open http://localhost:3000 to view it in the browser.
